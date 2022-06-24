@@ -7,3 +7,17 @@ body {
 .container {
     display: grid;
 }
+
+.header {
+    display: grid;
+}
+
+.title {
+    display: flex;
+}
+
+.title>img {
+    width: 10rem;
+    -webkit-filter: invert(80%);
+    filter: invert(80%);
+}
