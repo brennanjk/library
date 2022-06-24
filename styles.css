@@ -1,0 +1,8 @@
+
+body {
+    background-color: rgb(27, 26, 26);
+}
+
+.container {
+    display: grid;
+}
