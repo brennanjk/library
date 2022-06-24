@@ -2,6 +2,9 @@
 body {
     background-color: rgb(27, 26, 26);
     color: rgb(219, 235, 202);
+    font-family: 'Arima Madurai', cursive;
+    /*font-family:'Sacramento', cursive;*/
+    font-size: 25px;
 }
 
 .container {
@@ -21,8 +24,13 @@ body {
     align-items: center;
 }
 
+.title {
+    font-size: 65px;
+    gap: 1.5rem;
+}
+
 .title>img {
-    width: 10rem;
+    width: 7.5rem;
     -webkit-filter: invert(80%);
     filter: invert(80%);
 }
