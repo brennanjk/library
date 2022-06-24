@@ -1,10 +1,11 @@
 
 body {
     background-color: rgb(27, 26, 26);
-    color: rgb(219, 235, 202);
     font-family: 'Arima Madurai', cursive;
     /*font-family:'Sacramento', cursive;*/
     font-size: 25px;
+    --main-color: rgb(219, 235, 202);
+    color: var(--main-color);
 }
 
 .container {
@@ -51,22 +52,29 @@ body {
     margin: 0 auto;
     padding: 10px;
     display: grid;
+    gap: 15px;
     justify-items: center;
+    --main-bg: rgb(56, 57, 56);
 }
 
 input[type='text'] {
     padding: 10px;
     margin: 5px;
-    border: solid 5px rgb(219,235,202);
-    border-radius: 15px;
+    border: none;
+    border-bottom: solid 5px var(--main-color);
     font-size: 1rem;
+    background-color: var(--main-bg);
+    color: var(--main-color);
 }
 
 button[type='submit'] {
     font-family: inherit;
     font-size: 1.3rem;
+    font-weight: bold;
     width: 10rem;
     height: 4rem;
-    border: solid 5px rgb(219,235,202);
+    background-color: var(--main-bg);
+    color: var(--main-color);
+    border: solid 5px var(--main-color);
     border-radius: 15px;
 }
