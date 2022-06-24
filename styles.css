@@ -8,12 +8,17 @@ body {
     display: grid;
 }
 
-.header {
+.header,
+.body {
     display: grid;
+    grid-template-columns: 4fr minmax(200px, 1fr);
 }
 
-.title {
+.title,
+.book-counter {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .title>img {
