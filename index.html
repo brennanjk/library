@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>Book Library</title>
 </head>
@@ -16,7 +17,13 @@
         <img src="images/library-book-svgrepo-com.svg" alt="books">
         <div>Books on the Shelf</div>
       </div>
-      <div class="book-counter">We will add book<br>counter and stat information<br>in this area</div>
+      <div class="book-catalog">
+        <p>Library Catalog</p>
+        <p class="catalog-item">Books: <span id="book-count"></span></p>
+        <p class="catalog-item">Books read: <span id="read-count"></span></p>
+        <p class="catalog-item">Books unread: <span id="unread-count"></span></p>
+        <p class="catalog-item">Total pages: <span id="total-pages"></span></p>
+      </div>
     </div>
     <div class="body">
       <div class="book-library">Book cards will be added here</div>

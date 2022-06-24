@@ -18,10 +18,20 @@ body {
 }
 
 .title,
-.book-counter {
+.book-catalog {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
+}
+
+.catalog-item {
+    align-self: flex-start;
+}
+
+.book-catalog {
+    flex-direction: column;
+    line-height: 0%;
 }
 
 .title {
