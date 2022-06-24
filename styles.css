@@ -44,3 +44,29 @@ body {
     -webkit-filter: invert(80%);
     filter: invert(80%);
 }
+
+
+.book-form {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 10px;
+    display: grid;
+    justify-items: center;
+}
+
+input[type='text'] {
+    padding: 10px;
+    margin: 5px;
+    border: solid 5px rgb(219,235,202);
+    border-radius: 15px;
+    font-size: 1rem;
+}
+
+button[type='submit'] {
+    font-family: inherit;
+    font-size: 1.3rem;
+    width: 10rem;
+    height: 4rem;
+    border: solid 5px rgb(219,235,202);
+    border-radius: 15px;
+}

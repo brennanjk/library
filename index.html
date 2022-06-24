@@ -27,7 +27,35 @@
     </div>
     <div class="body">
       <div class="book-library">Book cards will be added here</div>
-      <div class="book-form">There will be a book form here<br>to enter new book info and submit it</div>
+      <form class="book-form" action="post"> Add New Book
+
+        <div>
+          <label for="title"></label>
+          <input type="text" id="title" placeholder="Title">
+        </div>
+
+        <div>
+          <label for="author"></label>
+          <input type="text" id="author" placeholder="Author">
+        </div>
+
+        <div>
+          <label for="pages"></label>
+          <input type="text" id="pages" placeholder="# of Pages">
+        </div>
+
+        <div>
+          <label for="read">Read</label>
+          <input type="radio" id="read" name="status" checked>
+
+          <label for="unread">Unread</label>
+          <input type="radio" id="unread" name="status">
+        </div>
+
+        <button type="submit" id="add-btn">Add Book</button>
+
+
+      </form>
     </div>
   </div>
   
