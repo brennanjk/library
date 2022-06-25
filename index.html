@@ -27,21 +27,20 @@
     </div>
     <div class="body">
       <div class="book-library">Book cards will be added here</div>
-      <form class="book-form" action="post"> Add New Book
-
+      <form name="book-form"> Add New Book
         <div>
           <label for="title"></label>
-          <input type="text" id="title" placeholder="Title">
+          <input type="text" id="title" name="title" placeholder="Title">
         </div>
 
         <div>
           <label for="author"></label>
-          <input type="text" id="author" placeholder="Author">
+          <input type="text" id="author" name="author" placeholder="Author">
         </div>
 
         <div>
           <label for="pages"></label>
-          <input type="text" id="pages" placeholder="# of Pages">
+          <input type="text" id="pages" name="pages" placeholder="# of Pages">
         </div>
 
         <div>
@@ -53,8 +52,6 @@
         </div>
 
         <button type="submit" id="add-btn">Add Book</button>
-
-
       </form>
     </div>
   </div>

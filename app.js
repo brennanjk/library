@@ -1,4 +1,5 @@
 const library = document.querySelector('.book-library');
+const bookForm = document.querySelector('[name="book-form"]');
 
 let bookLibrary = [];
 
@@ -52,3 +53,17 @@ function createBookObject() {
         book.appendChild(haveRead);
     }
 }
+
+bookForm.addEventListener("submit", function(event) {
+    console.log(event);
+    let title = document.querySelector('[name="title"]').value
+    console.log(title)
+    let author = document.querySelector('[name="author"]').value
+    console.log(author)
+    let pages = document.querySelector('[name="pages"]').value
+    console.log(pages);
+    let status = document.querySelector('[name="status"]').value
+    console.log(status);
+    event.preventDefault();
+    bookForm.reset();
+})
