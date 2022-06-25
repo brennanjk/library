@@ -5,11 +5,13 @@ body {
     /*font-family:'Sacramento', cursive;*/
     font-size: 25px;
     --main-color: rgb(219, 235, 150);
+    --main-bg: rgb(56, 57, 56);
     color: var(--main-color);
 }
 
 .container {
     display: grid;
+    grid-template-rows: auto;
 }
 
 .header,
@@ -26,18 +28,20 @@ body {
     flex: 1;
 }
 
-.catalog-item {
-    align-self: flex-start;
+.title {
+    grid-column: 1 / 2;
+    font-size: 65px;
+    gap: 1.5rem;
 }
 
 .book-catalog {
+    grid-column: 2 / 3;
     flex-direction: column;
     line-height: 0%;
 }
 
-.title {
-    font-size: 65px;
-    gap: 1.5rem;
+.catalog-item {
+    align-self: flex-start;
 }
 
 .title>img {
@@ -46,6 +50,9 @@ body {
     filter: invert(98%) sepia(7%) saturate(1995%) hue-rotate(13deg) brightness(96%) contrast(91%);
 }
 
+.book-library {
+    background-color: var(--main-bg);
+}
 
 form[name="book-form"] {
     box-sizing: border-box;
@@ -54,7 +61,6 @@ form[name="book-form"] {
     display: grid;
     gap: 15px;
     justify-items: center;
-    --main-bg: rgb(56, 57, 56);
 }
 
 input[type='text'] {
