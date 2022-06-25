@@ -4,7 +4,7 @@ body {
     font-family: 'Arima Madurai', cursive;
     /*font-family:'Sacramento', cursive;*/
     font-size: 25px;
-    --main-color: rgb(219, 235, 202);
+    --main-color: rgb(219, 235, 150);
     color: var(--main-color);
 }
 
@@ -42,8 +42,8 @@ body {
 
 .title>img {
     width: 7.5rem;
-    -webkit-filter: invert(80%);
-    filter: invert(80%);
+    -webkit-filter: invert(98%) sepia(7%) saturate(1995%) hue-rotate(13deg) brightness(96%) contrast(91%);
+    filter: invert(98%) sepia(7%) saturate(1995%) hue-rotate(13deg) brightness(96%) contrast(91%);
 }
 
 
