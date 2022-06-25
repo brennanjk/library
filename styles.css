@@ -67,6 +67,20 @@ input[type='text'] {
     color: var(--main-color);
 }
 
+input[name="status"] {
+    appearance: none;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-bg);
+    border-radius: 50%;
+}
+
+input[name="status"]:checked {
+    background-color: var(--main-color);
+}
+
 button[type='submit'] {
     font-family: inherit;
     font-size: 1.3rem;
