@@ -92,3 +92,13 @@ button[type='submit'] {
     border: solid 5px var(--main-color);
     border-radius: 15px;
 }
+
+button[type='submit']:hover {
+    background-color: var(--main-color);
+    color: var(--main-bg);
+    border-color: var(--main-bg);
+}
+
+button[type='submit']:active {
+    filter: brightness(50%);
+}
