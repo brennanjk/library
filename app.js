@@ -1,7 +1,9 @@
 const library = document.querySelector('.book-library');
 const bookForm = document.querySelector('[name="book-form"]');
-const readButton = document.getElementById('read');
-const unreadButton = document.getElementById('unread');
+const readOn = document.getElementById('read');
+const unreadOn = document.getElementById('unread');
+const readButton = document.querySelectorAll('.book-read');
+const unreadButton = document.querySelectorAll('book-unread');
 
 let bookLibrary = [];
 
@@ -65,13 +67,13 @@ bookForm.addEventListener("submit", function(event) {
     let title = document.querySelector('[name="title"]').value;
     let author = document.querySelector('[name="author"]').value;
     let pages = document.querySelector('[name="pages"]').value;
-    let readStatus = readButton.checked;
+    let readStatus = readOn.checked;
     let newBook = new book(title, author, pages, readStatus);
 
     addBooks(newBook);
     
     createBookObject();
-    
+
     /*prevent form from trying to submit results and refresh page. Reset form manually so form fields clear*/
     event.preventDefault();
     bookForm.reset();
