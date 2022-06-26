@@ -55,15 +55,16 @@ function createBookObject() {
 }
 
 bookForm.addEventListener("submit", function(event) {
-    console.log(event);
-    let title = document.querySelector('[name="title"]').value
-    console.log(title)
-    let author = document.querySelector('[name="author"]').value
-    console.log(author)
-    let pages = document.querySelector('[name="pages"]').value
-    console.log(pages);
-    let status = document.querySelector('[name="status"]').value
-    console.log(status);
+    let title = document.querySelector('[name="title"]').value;
+    let author = document.querySelector('[name="author"]').value;
+    let pages = document.querySelector('[name="pages"]').value;
+    let status = document.querySelector('[name="status"]').value;
+    let newBook = new book(title, author, pages, status);
+
+    addBooks(newBook);
+    
+    createBookObject();
+    /*prevent form from trying to submit results and refresh page. Reset form manually so form fields clear*/
     event.preventDefault();
     bookForm.reset();
 })
