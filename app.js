@@ -49,9 +49,14 @@ function createBookObject() {
         pageCount.textContent = `Page Count: ${bookLibrary[i].pageCount}`;
         book.appendChild(pageCount);
 
-        const haveRead = document.createElement('div');
-        haveRead.classList.add('book-read');
-        haveRead.textContent = `Read: ${bookLibrary[i].haveRead}`;
+        const haveRead = document.createElement('button');
+        if (bookLibrary[i].haveRead) {
+            haveRead.classList.add('book-read');
+            haveRead.textContent = "Read";
+        } else {
+            haveRead.classList.add('book-unread');
+            haveRead.textContent = "Not Read";
+        }
         book.appendChild(haveRead);
     }
 }
@@ -66,6 +71,7 @@ bookForm.addEventListener("submit", function(event) {
     addBooks(newBook);
     
     createBookObject();
+    
     /*prevent form from trying to submit results and refresh page. Reset form manually so form fields clear*/
     event.preventDefault();
     bookForm.reset();

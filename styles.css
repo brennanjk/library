@@ -131,3 +131,42 @@ button[type='submit']:hover {
 button[type='submit']:active {
     filter: brightness(50%);
 }
+
+button.book-read,
+button.book-unread {
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 8rem;
+    height: 2rem;
+    background-color: var(--main-bg);
+    border-radius: 15px;
+    justify-self: center;
+}
+
+button.book-read {
+    color: var(--main-color);
+    border: solid 3px var(--main-color);
+}
+
+button.book-unread {
+    color: rgba(231, 75, 75, 0.685);
+    border: solid 3px rgba(231, 75, 75, 0.685);
+}
+
+button.book-read:hover {
+    background-color: var(--main-color);
+    color: var(--main-bg);
+    border: solid 3px var(--main-bg);
+}
+
+button.book-unread:hover {
+    background-color: rgba(231, 75, 75, 0.685);
+    color: var(--main-bg);
+    border: solid 3px var(--main-bg);
+}
+
+button.book-read:active,
+button.book-unread:active {
+    filter: brightness(50%);
+}
