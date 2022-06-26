@@ -1,5 +1,7 @@
 const library = document.querySelector('.book-library');
 const bookForm = document.querySelector('[name="book-form"]');
+const readButton = document.getElementById('read');
+const unreadButton = document.getElementById('unread');
 
 let bookLibrary = [];
 
