@@ -20,6 +20,10 @@ body {
     grid-template-columns: 4fr minmax(200px, 1fr);
 }
 
+.body {
+    grid-template-rows: 1fr 1fr;
+}
+
 .title,
 .book-catalog {
     display: flex;
@@ -51,7 +55,24 @@ body {
 }
 
 .book-library {
-    background-color: var(--main-bg);
+    border:solid 10px var(--main-bg);
+    border-radius: 15px;
+    grid-row: 1 / 3;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(20rem,1fr));
+    padding: 15px;
+}
+
+.book {
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    gap: 10px;
+    height: 20rem;
+    border: solid 10px;
+    border-radius: 15px;
+    padding: 10px;
 }
 
 form[name="book-form"] {
