@@ -57,7 +57,6 @@ function createBookObject() {
 }
 
 bookForm.addEventListener("submit", function(event) {
-    event.preventDefault();
     let title = document.querySelector('[name="title"]').value;
     let author = document.querySelector('[name="author"]').value;
     let pages = document.querySelector('[name="pages"]').value;
@@ -68,5 +67,6 @@ bookForm.addEventListener("submit", function(event) {
     
     createBookObject();
     /*prevent form from trying to submit results and refresh page. Reset form manually so form fields clear*/
+    event.preventDefault();
     bookForm.reset();
 })
