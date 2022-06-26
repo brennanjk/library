@@ -30,25 +30,25 @@
       <form name="book-form"> Add New Book
         <div>
           <label for="title"></label>
-          <input type="text" id="title" name="title" placeholder="Title">
+          <input type="text" id="title" name="title" placeholder="Title" required>
         </div>
 
         <div>
           <label for="author"></label>
-          <input type="text" id="author" name="author" placeholder="Author">
+          <input type="text" id="author" name="author" placeholder="Author" required>
         </div>
 
         <div>
           <label for="pages"></label>
-          <input type="text" id="pages" name="pages" placeholder="# of Pages">
+          <input type="text" id="pages" name="pages" placeholder="# of Pages" required>
         </div>
 
         <div>
           <label for="read">Read</label>
-          <input type="radio" id="read" name="status" value="read" checked>
+          <input type="radio" id="read" name="status" value="read" required checked re>
 
           <label for="unread">Unread</label>
-          <input type="radio" id="unread" name="status" value="unread">
+          <input type="radio" id="unread" name="status" value="unread" required>
         </div>
 
         <button type="submit" id="add-btn">Add Book</button>
