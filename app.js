@@ -26,7 +26,7 @@ addBooks(testBook);
 /* function to iterate through Library and create page objects for books */
 
 function createBookObject() {
-    for (let i = 0; i < bookLibrary.length; i++) {
+    for (let i = (bookLibrary.length)-1; i < bookLibrary.length; i++) {
         const book = document.createElement('div');
         book.classList.add('book');
 
