@@ -17,42 +17,45 @@
         <img src="images/library-book-svgrepo-com.svg" alt="books">
         <div>Books on the Shelf</div>
       </div>
-      <div class="book-catalog">
-        <p>Library Catalog</p>
-        <p class="catalog-item">Books: <span id="book-count"></span></p>
-        <p class="catalog-item">Books read: <span id="read-count"></span></p>
-        <p class="catalog-item">Books unread: <span id="unread-count"></span></p>
-        <p class="catalog-item">Total pages: <span id="total-pages"></span></p>
-      </div>
     </div>
     <div class="body">
       <div class="book-library"></div>
-      <form name="book-form"> Add New Book
-        <div>
-          <label for="title"></label>
-          <input type="text" id="title" name="title" placeholder="Title" required>
+    </div>
+    <div class="side-bar">
+        <div class="book-catalog">
+          <p>Library Catalog</p>
+          <p class="catalog-item">Books: <span id="book-count"></span></p>
+          <p class="catalog-item">Books read: <span id="read-count"></span></p>
+          <p class="catalog-item">Books unread: <span id="unread-count"></span></p>
+          <p class="catalog-item">Total pages: <span id="total-pages"></span></p>
         </div>
 
-        <div>
-          <label for="author"></label>
-          <input type="text" id="author" name="author" placeholder="Author" required>
-        </div>
-
-        <div>
-          <label for="pages"></label>
-          <input type="text" id="pages" name="pages" placeholder="# of Pages" required>
-        </div>
-
-        <div>
-          <label for="read">Read</label>
-          <input type="radio" id="read" name="status" value="read" required checked re>
-
-          <label for="unread">Unread</label>
-          <input type="radio" id="unread" name="status" value="unread" required>
-        </div>
-
-        <button type="submit" id="add-btn">Add Book</button>
-      </form>
+        <form name="book-form"> Add New Book
+          <div>
+            <label for="title"></label>
+            <input type="text" id="title" name="title" placeholder="Title" required>
+          </div>
+  
+          <div>
+            <label for="author"></label>
+            <input type="text" id="author" name="author" placeholder="Author" required>
+          </div>
+  
+          <div>
+            <label for="pages"></label>
+            <input type="text" id="pages" name="pages" placeholder="# of Pages" required>
+          </div>
+  
+          <div>
+            <label for="read">Read</label>
+            <input type="radio" id="read" name="status" value="read" required checked re>
+  
+            <label for="unread">Unread</label>
+            <input type="radio" id="unread" name="status" value="unread" required>
+          </div>
+  
+          <button type="submit" id="add-btn">Add Book</button>
+        </form>
     </div>
   </div>
   
