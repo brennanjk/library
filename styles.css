@@ -11,7 +11,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: 250px 1fr;
     display: grid;
     grid-template-columns: 4fr minmax(200px, 1fr);
 }
