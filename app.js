@@ -34,6 +34,12 @@ addBooks(testBook);
 
 function updateCatalog() {
     bookCount.textContent = bookLibrary.length;
+
+    /* iterate through bookLibrary and add up how many 'haveRead' keys are true*/
+    readCount.textContent = bookLibrary.reduce((total, book) => book.haveRead ? ++total : total, 0);
+
+    /* iterate through bookLibrary and add up how many 'haveRead' keys are false*/
+    unreadCount.textContent = bookLibrary.reduce((total, book) => !book.haveRead ? ++total : total, 0);
 }
 
 /* function to iterate through Library array and create book object from the last book object in the array */
