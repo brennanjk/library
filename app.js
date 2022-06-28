@@ -3,6 +3,10 @@ const bookForm = document.querySelector('[name="book-form"]');
 const readOn = document.getElementById('read');
 const unreadOn = document.getElementById('unread');
 const readButton = document.querySelector('.test-class');
+const bookCount = document.getElementById('book-count');
+const readCount = document.getElementById('read-count');
+const unreadCount = document.getElementById('unread-count');
+const totalPageCount = document.getElementById('total-pages');
 
 let bookLibrary = [];
 
@@ -109,22 +113,5 @@ bookForm.addEventListener("submit", function(event) {
     bookForm.reset();
 })
 
-readButton.addEventListener('click', function() {
-    if (this.classList.contains('book-read')) {
-        this.classList.remove('book-read');
-        this.classList.add('book-unread');
-        this.textContent="Not read";
-    } else if (this.classList.contains('book-unread')) {
-        this.classList.remove('book-unread');
-        this.classList.add('book-read');
-        this.textContent="Read";
-    }
-})
 
-/*
-unreadButton.addEventListener('click', function() {
-    this.classList.remove('book-unread');
-    this.classList.add('book-read');
-    this.textContent="Read";
-})
-*/
+
