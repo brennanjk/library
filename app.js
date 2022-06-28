@@ -40,6 +40,9 @@ function updateCatalog() {
 
     /* iterate through bookLibrary and add up how many 'haveRead' keys are false*/
     unreadCount.textContent = bookLibrary.reduce((total, book) => !book.haveRead ? ++total : total, 0);
+
+    /* count total pages of all books */
+    totalPageCount.textContent = bookLibrary.reduce((total, book) => total += Number(book.pageCount) , 0)
 }
 
 /* function to iterate through Library array and create book object from the last book object in the array */
