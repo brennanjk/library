@@ -64,7 +64,7 @@ function createBookObject() {
             if (this.classList.contains('book-read')) {
                 this.classList.remove('book-read');
                 this.classList.add('book-unread');
-                this.textContent="Not read";
+                this.textContent="Not Read";
             } else if (this.classList.contains('book-unread')) {
                 this.classList.remove('book-unread');
                 this.classList.add('book-read');

@@ -82,7 +82,6 @@ body {
 
 .book {
     display: grid;
-    justify-content: start;
     align-content: center;
     gap: 10px;
     height: 20rem;
