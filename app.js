@@ -2,8 +2,7 @@ const library = document.querySelector('.book-library');
 const bookForm = document.querySelector('[name="book-form"]');
 const readOn = document.getElementById('read');
 const unreadOn = document.getElementById('unread');
-const readButton = document.querySelectorAll('.book-read');
-const unreadButton = document.querySelectorAll('book-unread');
+const readButton = document.querySelector('.test-class');
 
 let bookLibrary = [];
 
@@ -55,10 +54,24 @@ function createBookObject() {
         if (bookLibrary[i].haveRead) {
             haveRead.classList.add('book-read');
             haveRead.textContent = "Read";
+            
         } else {
             haveRead.classList.add('book-unread');
             haveRead.textContent = "Not Read";
         }
+
+        haveRead.addEventListener('click', function() {
+            if (this.classList.contains('book-read')) {
+                this.classList.remove('book-read');
+                this.classList.add('book-unread');
+                this.textContent="Not read";
+            } else if (this.classList.contains('book-unread')) {
+                this.classList.remove('book-unread');
+                this.classList.add('book-read');
+                this.textContent="Read";
+            }
+        })
+
         book.appendChild(haveRead);
     }
 }
@@ -78,3 +91,23 @@ bookForm.addEventListener("submit", function(event) {
     event.preventDefault();
     bookForm.reset();
 })
+
+readButton.addEventListener('click', function() {
+    if (this.classList.contains('book-read')) {
+        this.classList.remove('book-read');
+        this.classList.add('book-unread');
+        this.textContent="Not read";
+    } else if (this.classList.contains('book-unread')) {
+        this.classList.remove('book-unread');
+        this.classList.add('book-read');
+        this.textContent="Read";
+    }
+})
+
+/*
+unreadButton.addEventListener('click', function() {
+    this.classList.remove('book-unread');
+    this.classList.add('book-read');
+    this.textContent="Read";
+})
+*/
