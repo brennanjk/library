@@ -30,7 +30,13 @@ function addBooks(book) {
 
 addBooks(testBook);
 
-/* function to iterate through Library and create page objects for books */
+/* function to update 'Library Catalog' section based upon books in the bookLibrary array */
+
+function updateCatalog() {
+    bookCount.textContent = bookLibrary.length;
+}
+
+/* function to iterate through Library array and create book object from the last book object in the array */
 
 function createBookObject() {
     for (let i = (bookLibrary.length)-1; i < bookLibrary.length; i++) {
@@ -107,6 +113,8 @@ bookForm.addEventListener("submit", function(event) {
     addBooks(newBook);
     
     createBookObject();
+
+    updateCatalog();
 
     /*prevent form from trying to submit results and refresh page. Reset form manually so form fields clear*/
     event.preventDefault();
