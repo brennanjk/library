@@ -94,6 +94,10 @@ function createBookObject() {
                     }
                 })
 
+                /* update Library Catalog counts*/
+                readCount.textContent = Number(readCount.textContent) - 1;
+                unreadCount.textContent = Number(unreadCount.textContent) + 1;
+
             } else if (this.classList.contains('book-unread')) {
                 this.classList.remove('book-unread');
                 this.classList.add('book-read');
@@ -105,6 +109,10 @@ function createBookObject() {
                         book.haveRead = true
                     }
                 })
+
+                /* update Library Catalog counts*/
+                readCount.textContent = Number(readCount.textContent) + 1;
+                unreadCount.textContent = Number(unreadCount.textContent) - 1;
             }
         })
 
