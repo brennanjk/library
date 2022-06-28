@@ -38,6 +38,8 @@ function createBookObject() {
         const title = document.createElement('div');
         title.classList.add('book-title');
         title.textContent = `Title: ${bookLibrary[i].title}`;
+        /* set variable that we will use in eventlistener below to check the title against bookLibrary object titles */
+        const titleCheck = title.textContent.replace('Title: ','');
         book.appendChild(title);
 
         const author = document.createElement('div');
@@ -65,10 +67,25 @@ function createBookObject() {
                 this.classList.remove('book-read');
                 this.classList.add('book-unread');
                 this.textContent="Not Read";
+                
+                /* Make button press update the related array object 'haveRead' key value to false*/
+                const titleMatch = bookLibrary.find(function(book) {
+                    if(book.title === titleCheck) {
+                        book.haveRead = false
+                    }
+                })
+
             } else if (this.classList.contains('book-unread')) {
                 this.classList.remove('book-unread');
                 this.classList.add('book-read');
                 this.textContent="Read";
+                
+                /* Make button press update the related array object 'haveRead' key value to true*/
+                const titleMatch = bookLibrary.find(function(book) {
+                    if(book.title === titleCheck) {
+                        book.haveRead = true
+                    }
+                })
             }
         })
 
