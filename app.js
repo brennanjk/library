@@ -151,15 +151,26 @@ bookForm.addEventListener("submit", function(event) {
     let readStatus = readOn.checked;
     let newBook = new book(title, author, pages, readStatus);
 
-    addBooks(newBook);
+    /* variable we'll use to check for duplicate books */
+    const duplicateCheck = bookLibrary.find(books => books.title === title);
+    console.log(duplicateCheck);
+
+    /* Determine if book already exists (trigger error alert), or if not then add the book and update the page accordingly*/
+    if (duplicateCheck) {
+        alert("This book already exists, please enter a new book");
+        event.preventDefault();
+    }
+    else {
+        addBooks(newBook);
     
-    createBookObject();
+        createBookObject();
 
-    updateCatalog();
+        updateCatalog();
 
-    /*prevent form from trying to submit results and refresh page. Reset form manually so form fields clear*/
-    event.preventDefault();
-    bookForm.reset();
+        /*prevent form from trying to submit results and refresh page. Reset form manually so form fields clear*/
+        event.preventDefault();
+        bookForm.reset();
+    }
 })
 
 
