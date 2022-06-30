@@ -128,7 +128,19 @@ function createBookObject() {
         const deleteButton = document.createElement('button');
         deleteButton.classList.add('delete-btn');
         deleteButton.textContent = 'Delete';
-        btnContainer.appendChild(deleteButton)
+        /* Add delete functionality to button */
+        deleteButton.addEventListener('click', function() {
+            /* find and remove book array element */
+            bookIndex = bookLibrary.findIndex(books => books.title === titleCheck);
+            bookLibrary.splice(bookIndex, 1);
+
+            /*remove book HTML elements */
+            book.remove();
+
+            /*update Library Catalog to reflect changes*/
+            updateCatalog();
+        })
+        btnContainer.appendChild(deleteButton);
     }
 }
 
