@@ -4,7 +4,7 @@ body {
     font-family: 'Arima Madurai', cursive;
     /*font-family:'Sacramento', cursive;*/
     font-size: 25px;
-    --main-color: rgb(219, 235, 150);
+    --main-color: rgb(177, 235, 150);
     --main-bg: rgb(56, 57, 56);
     color: var(--main-color);
 }
@@ -65,8 +65,8 @@ body {
 
 .title>img {
     width: 7.5rem;
-    -webkit-filter: invert(98%) sepia(7%) saturate(1995%) hue-rotate(13deg) brightness(96%) contrast(91%);
-    filter: invert(98%) sepia(7%) saturate(1995%) hue-rotate(13deg) brightness(96%) contrast(91%);
+    -webkit-filter: invert(96%) sepia(12%) saturate(1276%) hue-rotate(40deg) brightness(97%) contrast(90%);
+    filter: invert(96%) sepia(12%) saturate(1276%) hue-rotate(40deg) brightness(97%) contrast(90%);
 }
 
 .book-library {
