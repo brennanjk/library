@@ -54,22 +54,30 @@ function createBookObject() {
 
         library.appendChild(book);
 
+        const bookInfo = document.createElement('div');
+        bookInfo.classList.add('book-info');
+        book.append(bookInfo);
+
         const title = document.createElement('div');
         title.classList.add('book-title');
         title.textContent = `${bookLibrary[i].title}`;
         /* set variable that we will use in eventlistener below to check the title against bookLibrary object titles */
         const titleCheck = title.textContent
-        book.appendChild(title);
+        bookInfo.appendChild(title);
 
         const author = document.createElement('div');
         author.classList.add('book-author');
         author.textContent = `${bookLibrary[i].author}`;
-        book.appendChild(author);
+        bookInfo.appendChild(author);
 
         const pageCount = document.createElement('div')
         pageCount.classList.add('book-pageCount');
         pageCount.textContent = `Pages: ${bookLibrary[i].pageCount}`;
-        book.appendChild(pageCount);
+        bookInfo.appendChild(pageCount);
+
+        const btnContainer = document.createElement('div');
+        btnContainer.classList.add('btn-container');
+        book.append(btnContainer);
 
         const haveRead = document.createElement('button');
         if (bookLibrary[i].haveRead) {
@@ -115,14 +123,12 @@ function createBookObject() {
                 unreadCount.textContent = Number(unreadCount.textContent) - 1;
             }
         })
-
-        book.appendChild(haveRead);
+        btnContainer.appendChild(haveRead);
 
         const deleteButton = document.createElement('button');
         deleteButton.classList.add('delete-btn');
         deleteButton.textContent = 'Delete';
-
-        book.appendChild(deleteButton)
+        btnContainer.appendChild(deleteButton)
     }
 }
 

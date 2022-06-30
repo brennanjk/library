@@ -82,12 +82,21 @@ body {
 
 .book {
     display: grid;
-    align-content: center;
     gap: 10px;
     height: 20rem;
     border: solid 10px;
     border-radius: 15px;
     padding: 10px;
+}
+
+.bookinfo {
+    align-self: start;
+}
+
+.btn-container {
+    justify-self: center;
+    align-self: end;
+    
 }
 
 form[name="book-form"] {
@@ -160,7 +169,7 @@ button.delete-btn {
     height: 2rem;
     background-color: var(--main-bg);
     border-radius: 15px;
-    justify-self: center;
+    display: block;
 }
 
 button.book-read {
@@ -176,7 +185,7 @@ button.book-unread {
 button.delete-btn {
     color: rgb(209, 209, 209);
     border: solid 3px rgb(209, 209, 209);
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 button.book-read:hover {
