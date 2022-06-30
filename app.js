@@ -18,17 +18,11 @@ function book(title, author, pageCount, haveRead) {
     this.haveRead = haveRead
 }
 
-/* test book */
-
-let testBook = new book('Fear and Loathing in Las Vegas','Hunter S. Thompson', 204, true )
-
-/* Add book to bookLibrary */
+/* Function to add books to bookLibrary */
 
 function addBooks(book) {
     bookLibrary.push(book);
 }
-
-addBooks(testBook);
 
 /* function to update 'Library Catalog' section based upon books in the bookLibrary array */
 
@@ -143,6 +137,22 @@ function createBookObject() {
         btnContainer.appendChild(deleteButton);
     }
 }
+
+/* Default Books */
+
+const testBook1 = new book('Fear and Loathing in Las Vegas','Hunter S. Thompson', 204, true );
+const testBook2 = new book('Dark Matter: A Novel', 'Blake Crouch', 352, false);
+const testBook3 = new book('The Fellowship of the Ring','J.R.R. Tolkien', 423, true);
+const testBook4 = new book('Fahrenheit 451', 'Ray Bradbury', 249, false);
+
+/* Add default books to bookLibrary array - Add book objects to page - update Library Catalog*/
+addBooks(testBook1); createBookObject();
+addBooks(testBook2); createBookObject();
+addBooks(testBook3); createBookObject();
+addBooks(testBook4); createBookObject();
+updateCatalog();
+
+/* Form button book add logic */
 
 bookForm.addEventListener("submit", function(event) {
     let title = document.querySelector('[name="title"]').value;
