@@ -56,19 +56,19 @@ function createBookObject() {
 
         const title = document.createElement('div');
         title.classList.add('book-title');
-        title.textContent = `Title: ${bookLibrary[i].title}`;
+        title.textContent = `${bookLibrary[i].title}`;
         /* set variable that we will use in eventlistener below to check the title against bookLibrary object titles */
-        const titleCheck = title.textContent.replace('Title: ','');
+        const titleCheck = title.textContent
         book.appendChild(title);
 
         const author = document.createElement('div');
         author.classList.add('book-author');
-        author.textContent = `Author: ${bookLibrary[i].author}`;
+        author.textContent = `${bookLibrary[i].author}`;
         book.appendChild(author);
 
         const pageCount = document.createElement('div')
         pageCount.classList.add('book-pageCount');
-        pageCount.textContent = `Page Count: ${bookLibrary[i].pageCount}`;
+        pageCount.textContent = `Pages: ${bookLibrary[i].pageCount}`;
         book.appendChild(pageCount);
 
         const haveRead = document.createElement('button');

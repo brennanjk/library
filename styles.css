@@ -145,6 +145,11 @@ button[type='submit']:active {
     filter: brightness(50%);
 }
 
+.book-title {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
 button.book-read,
 button.book-unread,
 button.delete-btn {
