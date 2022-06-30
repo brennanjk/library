@@ -171,6 +171,7 @@ button.book-unread {
 button.delete-btn {
     color: rgb(209, 209, 209);
     border: solid 3px rgb(209, 209, 209);
+    margin-top: 10px;
 }
 
 button.book-read:hover {
@@ -192,12 +193,7 @@ button.delete-btn:hover {
 }
 
 button.book-read:active,
-button.book-unread:active {
+button.book-unread:active,
+button.delete-btn:active {
     filter: brightness(50%);
-}
-
-.btn-container {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 }
