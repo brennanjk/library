@@ -83,18 +83,20 @@ body {
 .book {
     display: grid;
     gap: 10px;
-    height: 20rem;
+    height: 30rem;
     border: solid 10px;
     border-radius: 15px;
     padding: 10px;
+    justify-items: center;
+    text-align: center;
+    word-break: break-word;
 }
 
-.bookinfo {
-    align-self: start;
+.book-info {
+    align-self: center;
 }
 
 .btn-container {
-    justify-self: center;
     align-self: end;
     
 }
