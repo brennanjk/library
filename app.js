@@ -117,6 +117,12 @@ function createBookObject() {
         })
 
         book.appendChild(haveRead);
+
+        const deleteButton = document.createElement('button');
+        deleteButton.classList.add('delete-btn');
+        deleteButton.textContent = 'Delete';
+
+        book.appendChild(deleteButton)
     }
 }
 

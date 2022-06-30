@@ -146,7 +146,8 @@ button[type='submit']:active {
 }
 
 button.book-read,
-button.book-unread {
+button.book-unread,
+button.delete-btn {
     font-family: inherit;
     font-size: 1.1rem;
     font-weight: bold;
@@ -167,6 +168,11 @@ button.book-unread {
     border: solid 3px rgba(231, 75, 75, 0.685);
 }
 
+button.delete-btn {
+    color: rgb(209, 209, 209);
+    border: solid 3px rgb(209, 209, 209);
+}
+
 button.book-read:hover {
     background-color: var(--main-color);
     color: var(--main-bg);
@@ -179,7 +185,19 @@ button.book-unread:hover {
     border: solid 3px var(--main-bg);
 }
 
+button.delete-btn:hover {
+    background-color: rgb(209, 209, 209);
+    color: var(--main-bg);
+    border: solid 3px var(--main-bg);
+}
+
 button.book-read:active,
 button.book-unread:active {
     filter: brightness(50%);
+}
+
+.btn-container {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
