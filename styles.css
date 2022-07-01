@@ -180,13 +180,13 @@ button.book-read {
 }
 
 button.book-unread {
-    color: rgba(231, 75, 75, 0.685);
-    border: solid 3px rgba(231, 75, 75, 0.685);
+    color: rgb(209, 209, 209);
+    border: solid 3px rgb(209, 209, 209);
 }
 
 button.delete-btn {
-    color: rgb(209, 209, 209);
-    border: solid 3px rgb(209, 209, 209);
+    color: rgba(231, 75, 75, 0.685);
+    border: solid 3px rgba(231, 75, 75, 0.685);
     margin-top: 20px;
 }
 
@@ -197,13 +197,13 @@ button.book-read:hover {
 }
 
 button.book-unread:hover {
-    background-color: rgba(231, 75, 75, 0.685);
+    background-color: rgb(209, 209, 209);
     color: var(--main-bg);
     border: solid 3px var(--main-bg);
 }
 
 button.delete-btn:hover {
-    background-color: rgb(209, 209, 209);
+    background-color: rgba(231, 75, 75, 0.685);
     color: var(--main-bg);
     border: solid 3px var(--main-bg);
 }
