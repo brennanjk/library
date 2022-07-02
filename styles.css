@@ -1,3 +1,10 @@
+:root {
+    --main-color: rgb(177, 235, 150);
+    --root-bg: rgb(27, 26, 26);
+    --main-bg: rgb(56, 57, 56);
+    --grey-color: rgb(209, 209, 209);
+    --red-color: rgba(231, 75, 75, 0.685);
+}
 
 *,
 *::before,
@@ -9,12 +16,10 @@
 
 html {
     font-size: 25px;
-    background-color: rgb(27, 26, 26);
     font-family: 'Arima Madurai', cursive;
     /*font-family:'Sacramento', cursive;*/
-    --main-color: rgb(177, 235, 150);
-    --main-bg: rgb(56, 57, 56);
     color: var(--main-color);
+    background-color: var(--root-bg)
 }
 
 .container {
@@ -189,13 +194,13 @@ button.book-read {
 }
 
 button.book-unread {
-    color: rgb(209, 209, 209);
-    border: solid 3px rgb(209, 209, 209);
+    color: var(--grey-color);
+    border: solid 3px var(--grey-color);
 }
 
 button.delete-btn {
-    color: rgba(231, 75, 75, 0.685);
-    border: solid 3px rgba(231, 75, 75, 0.685);
+    color: var(--red-color);
+    border: solid 3px var(--red-color);
     margin-top: .7rem;
     margin-bottom: 5px;
 }
@@ -207,13 +212,13 @@ button.book-read:hover {
 }
 
 button.book-unread:hover {
-    background-color: rgb(209, 209, 209);
+    background-color: var(--grey-color);
     color: var(--main-bg);
     border: solid 3px var(--main-bg);
 }
 
 button.delete-btn:hover {
-    background-color: rgba(231, 75, 75, 0.685);
+    background-color: var(--red-color);
     color: var(--main-bg);
     border: solid 3px var(--main-bg);
 }
