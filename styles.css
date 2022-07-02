@@ -17,7 +17,6 @@
 html {
     font-size: 25px;
     font-family: 'Arima Madurai', cursive;
-    /*font-family:'Sacramento', cursive;*/
     color: var(--main-color);
     background-color: var(--root-bg);
 }
