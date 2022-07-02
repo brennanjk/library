@@ -265,7 +265,7 @@ button.delete-btn:active {
     }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 540px) {
     html {
         font-size: 14px;
     }
