@@ -19,13 +19,17 @@ html {
     font-family: 'Arima Madurai', cursive;
     /*font-family:'Sacramento', cursive;*/
     color: var(--main-color);
-    background-color: var(--root-bg)
+    background-color: var(--root-bg);
+}
+
+html, body, .container {
+    height: 100%;
+    width: 100%;
 }
 
 .container {
     display: grid;
-    grid-template-rows: 8rem 1fr;
-    display: grid;
+    grid-template-rows: 8rem 1fr auto;
     grid-template-columns: 4fr minmax(225px, 1fr);
     font-size: 1rem;
     padding: 0 .5rem;
@@ -36,12 +40,6 @@ html {
 }
 
 .body {
-    display: grid;
-}
-
-.body {
-    grid-template-rows: 1fr 1fr;
-    align-items: start;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 }
@@ -117,7 +115,6 @@ html {
 
 .btn-container {
     align-self: end;
-    
 }
 
 form[name="book-form"] {
@@ -227,6 +224,22 @@ button.book-read:active,
 button.book-unread:active,
 button.delete-btn:active {
     filter: brightness(50%);
+}
+
+.footer {
+    justify-self: center;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+    font-weight: bold;
+    padding: 5rem 0 1rem;
+    display: flex;
+    gap: .5rem;
+}
+
+.footer>img {
+    width: 1.3rem;
+    -webkit-filter: invert(96%) sepia(12%) saturate(1276%) hue-rotate(40deg) brightness(97%) contrast(90%);
+    filter: invert(96%) sepia(12%) saturate(1276%) hue-rotate(40deg) brightness(97%) contrast(90%);
 }
 
 @media (max-width: 1250px) {
