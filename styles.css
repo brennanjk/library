@@ -15,7 +15,7 @@
 }
 
 html {
-    font-size: 25px;
+    font-size: 21.5px;
     font-family: 'Arima Madurai', cursive;
     color: var(--main-color);
     background-color: var(--root-bg);
@@ -229,6 +229,7 @@ button.delete-btn:active {
     justify-self: center;
     grid-row: 3 / 4;
     grid-column: 1 / -1;
+    font-size: .7rem;
     font-weight: bold;
     padding: 5rem 0 1rem;
     display: flex;
@@ -241,19 +242,7 @@ button.delete-btn:active {
     filter: invert(96%) sepia(12%) saturate(1276%) hue-rotate(40deg) brightness(97%) contrast(90%);
 }
 
-@media (max-width: 1250px) {
-    html {
-        font-size: 22px;
-    }
-    .side-bar {
-        grid-row: 2 / 3;
-    }
-    .header {
-        grid-column: 1 / -1;
-    }
-}
-
-@media (max-width: 1065px) {
+@media (max-width: 1280px) {
     html {
         font-size: 18px;
     }
