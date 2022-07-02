@@ -1,9 +1,17 @@
 
-body {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 25px;
     background-color: rgb(27, 26, 26);
     font-family: 'Arima Madurai', cursive;
     /*font-family:'Sacramento', cursive;*/
-    font-size: 25px;
     --main-color: rgb(177, 235, 150);
     --main-bg: rgb(56, 57, 56);
     color: var(--main-color);
@@ -13,7 +21,9 @@ body {
     display: grid;
     grid-template-rows: 250px 1fr;
     display: grid;
-    grid-template-columns: 4fr minmax(200px, 1fr);
+    grid-template-columns: 4fr minmax(225px, 1fr);
+    font-size: 1rem;
+    padding: 0 .5rem;
 }
 
 .header {
@@ -34,7 +44,7 @@ body {
 .side-bar {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
-    padding: 2rem;
+    padding: 1rem;
     position: sticky;
     align-self: start;
     top: 0;
@@ -49,10 +59,9 @@ body {
 }
 
 .title {
-    font-size: 65px;
+    font-size: 2.7rem;
     gap: 1.5rem;
     padding: 2rem;
-    height: 120px;
 }
 
 .book-catalog {
@@ -64,7 +73,7 @@ body {
 }
 
 .title>img {
-    width: 7.5rem;
+    width: 5.5rem;
     -webkit-filter: invert(96%) sepia(12%) saturate(1276%) hue-rotate(40deg) brightness(97%) contrast(90%);
     filter: invert(96%) sepia(12%) saturate(1276%) hue-rotate(40deg) brightness(97%) contrast(90%);
 }
@@ -75,15 +84,15 @@ body {
     grid-row: 1 / 3;
     display: grid;
     gap: 15px;
-    grid-template-columns: repeat(auto-fill, minmax(20rem,1fr));
-    padding: 15px;
-    min-height: 22.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem,1fr));
+    padding: .5rem;
+    min-height: 10.5rem;
 }
 
 .book {
     display: grid;
     gap: 10px;
-    height: 30rem;
+    height: 22rem;
     border: solid 10px;
     border-radius: 15px;
     padding: 10px;
@@ -94,6 +103,11 @@ body {
 
 .book-info {
     align-self: center;
+}
+
+.book-title {
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .btn-container {
@@ -115,7 +129,7 @@ input[type='text'] {
     margin: 5px;
     border: none;
     border-bottom: solid 5px var(--main-color);
-    font-size: 1rem;
+    font-size: .7rem;
     background-color: var(--main-bg);
     color: var(--main-color);
 }
@@ -136,10 +150,10 @@ input[name="status"]:checked {
 
 button[type='submit'] {
     font-family: inherit;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bold;
-    width: 10rem;
-    height: 4rem;
+    width: 7rem;
+    height: 2.5rem;
     background-color: var(--main-bg);
     color: var(--main-color);
     border: solid 5px var(--main-color);
@@ -156,19 +170,14 @@ button[type='submit']:active {
     filter: brightness(50%);
 }
 
-.book-title {
-    font-weight: bold;
-    font-size: 2rem;
-}
-
 button.book-read,
 button.book-unread,
 button.delete-btn {
     font-family: inherit;
-    font-size: 1.1rem;
+    font-size: .8rem;
     font-weight: bold;
-    width: 8rem;
-    height: 2rem;
+    width: 6rem;
+    height: 1.5rem;
     background-color: var(--main-bg);
     border-radius: 15px;
     display: block;
@@ -187,7 +196,8 @@ button.book-unread {
 button.delete-btn {
     color: rgba(231, 75, 75, 0.685);
     border: solid 3px rgba(231, 75, 75, 0.685);
-    margin-top: 20px;
+    margin-top: .7rem;
+    margin-bottom: 5px;
 }
 
 button.book-read:hover {
@@ -213,3 +223,40 @@ button.book-unread:active,
 button.delete-btn:active {
     filter: brightness(50%);
 }
+
+@media (max-width: 1250px) {
+    html {
+        font-size: 22px;
+    }
+    .side-bar {
+        grid-row: 2 / 3;
+    }
+    .header {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 1065px) {
+    html {
+        font-size: 18px;
+    }
+    .side-bar {
+        grid-row: 2 / 3;
+    }
+    .header {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 415px) {
+    html {
+        font-size: 14px;
+    }
+    .side-bar {
+        grid-row: 2 / 3;
+    }
+    .header {
+        grid-column: 1 / -1;
+    }
+}
+
