@@ -10,12 +10,15 @@ const totalPageCount = document.getElementById('total-pages');
 
 let bookLibrary = [];
 
-/* book constructor */
-function book(title, author, pageCount, haveRead) {
-    this.title = title;
-    this.author = author;
-    this.pageCount = pageCount
-    this.haveRead = haveRead
+/* book class */
+class book {
+
+    constructor(title, author, pageCount, haveRead) {
+        this.title = title;
+        this.author = author;
+        this.pageCount = pageCount
+        this.haveRead = haveRead
+    }
 }
 
 /* Function to add books to bookLibrary */
