@@ -264,5 +264,8 @@ button.delete-btn:active {
     .header {
         grid-column: 1 / -1;
     }
+    .container {
+        padding: 0;
+    }
 }
 
